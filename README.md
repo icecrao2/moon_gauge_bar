@@ -1,23 +1,38 @@
 ## Features
+A simple and easy-to-use gauge bar package!
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+### 1. half circular gauge bar
+![half_circular_gaugebar.gif](half_circular_gaugebar.gif)
+
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+```flutter pub add moon_gauge_bar```
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
-
+### 1. half circular gauge bar
 ```dart
-const like = 'sample';
+SizedBox(
+    width: 200,
+    height: 200,
+    // use moon gauge bar
+    child: MoonGaugeBar.halfCircularGaugeBar(
+        score: score,
+        labelStyle: const MoonGaugeLabelStyleUIModel(
+            startPointText: "0",
+            endPointText: "100",
+        ),
+    ),
+)
 ```
 
 ## Additional information
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+### properties objects
+1. gaugeStyle : MoonGaugeBarStyleUIModel()
+Define the style for the gauge bar.
+2. labelStyle : MoonGaugeLabelStyleUIModel()
+Define the style for the gauge bar labels.
+3. scoreStyle : MoonGaugeScoreStyleUIModel()
+Define the style for the score in the center of the gauge bar.

@@ -27,6 +27,10 @@ class MoonGaugeBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    return _getWidget();
+  }
+
+  Widget _getWidget() {
     switch(_style){
       case MoonGaugeStyleUIModel.halfCircular:
         return _MoonGaugeHalfCircularGaugeBar(score: score, animationDuration: animationDuration, gaugeStyle: gaugeStyle, scoreStyle: scoreStyle, labelStyle: labelStyle);

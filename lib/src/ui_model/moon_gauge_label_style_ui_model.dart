@@ -15,8 +15,8 @@ class MoonGaugeLabelStyleUIModel {
   const MoonGaugeLabelStyleUIModel({
     this.startPointText = "0",
     this.endPointText = "100",
-    TextStyle startPointLabelStyle = const TextStyle(),
-    TextStyle endPointLabelStyle = const TextStyle(),
+    TextStyle startPointLabelStyle = const TextStyle(color: Colors.grey),
+    TextStyle endPointLabelStyle = const TextStyle(color: Colors.grey),
     this.startPointTextScale = 1,
     this.endPointTextScale = 1
   })

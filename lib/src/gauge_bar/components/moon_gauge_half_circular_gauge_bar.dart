@@ -89,7 +89,6 @@ class _MoonGaugeHalfCircularGaugeBarRenderBox extends RenderBox {
   MoonGaugeBarStyleUIModel gaugeStyle;
   MoonGaugeScoreStyleUIModel scoreStyle;
   MoonGaugeLabelStyleUIModel labelStyle;
-  
 
   double _oldScore = 0;
   double _progress = 0;
@@ -136,8 +135,8 @@ class _MoonGaugeHalfCircularGaugeBarRenderBox extends RenderBox {
   void paint(PaintingContext context, Offset offset) {
     var canvas = context.canvas;
 
-    var fittedWidthArcStrokeWidth = (size.width / 317) * 25;
-    var fittedHeightArcStrokeWidth = (size.height / 167) * 25;
+    var fittedWidthArcStrokeWidth = (size.width / 200) * 18;
+    var fittedHeightArcStrokeWidth = (size.height / 200) * 18;
 
     var arcStrokeWidth = fittedWidthArcStrokeWidth > fittedHeightArcStrokeWidth ? fittedHeightArcStrokeWidth : fittedWidthArcStrokeWidth;
 
@@ -152,7 +151,9 @@ class _MoonGaugeHalfCircularGaugeBarRenderBox extends RenderBox {
       ..strokeCap = gaugeStyle.gaugeBarCap
       ..strokeWidth = arcStrokeWidth * gaugeStyle.gaugeBarWidthScale;
 
-    final Rect rect = Rect.fromCircle(center: Offset(offset.dx + size.width / 2, offset.dy + size.height * 0.8), radius: size.height * 0.6);
+    var radius = size.height > size.width ? size.width * 0.5 : size.height * 0.5;
+
+    final Rect rect = Rect.fromCircle(center: Offset(offset.dx + size.width / 2, offset.dy + size.height * 0.5 + radius * 0.5), radius: radius);
 
     if(score.isNaN) {
       score = 0;
@@ -171,8 +172,8 @@ class _MoonGaugeHalfCircularGaugeBarRenderBox extends RenderBox {
 
   void _paintScoreTitleText(Canvas canvas, Offset offset) {
 
-    var fittedWidthTitleFotSize = (size.width / 317) * 18;
-    var fittedHeightTitleFotSize = (size.height / 167) * 18;
+    var fittedWidthTitleFotSize = (size.width / 200) * 18;
+    var fittedHeightTitleFotSize = (size.height / 200) * 18;
 
     var titleFontSize = fittedWidthTitleFotSize > fittedHeightTitleFotSize ? fittedHeightTitleFotSize : fittedWidthTitleFotSize;
     _textPainter.text = TextSpan(
@@ -185,8 +186,8 @@ class _MoonGaugeHalfCircularGaugeBarRenderBox extends RenderBox {
 
   void _paintScoreText(Canvas canvas, Offset offset, double score) {
 
-    var fittedWidthScoreFotSize = (size.width / 317) * 30;
-    var fittedHeightScoreFotSize = (size.height / 167) * 30;
+    var fittedWidthScoreFotSize = (size.width / 200) * 30;
+    var fittedHeightScoreFotSize = (size.height / 200) * 30;
 
     var scoreFontSize = fittedWidthScoreFotSize > fittedHeightScoreFotSize ? fittedHeightScoreFotSize : fittedWidthScoreFotSize;
     _textPainter.text = TextSpan(
@@ -199,8 +200,8 @@ class _MoonGaugeHalfCircularGaugeBarRenderBox extends RenderBox {
 
   void _paintMinMaxLabel(Canvas canvas, Offset offset, Rect rect) {
 
-    var fittedWidthLabelFotSize = (size.width / 317) * 10;
-    var fittedHeightLabelFotSize = (size.height / 167) * 10;
+    var fittedWidthLabelFotSize = (size.width / 200) * 10;
+    var fittedHeightLabelFotSize = (size.height / 200) * 10;
 
     var labelFontSize = fittedWidthLabelFotSize > fittedHeightLabelFotSize ? fittedHeightLabelFotSize : fittedWidthLabelFotSize;
 

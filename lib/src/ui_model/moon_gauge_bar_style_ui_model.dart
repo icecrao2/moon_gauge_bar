@@ -13,8 +13,8 @@ class MoonGaugeBarStyleUIModel {
   MoonGaugeBarStyleUIModel({
     this.gaugeBarCap = StrokeCap.round,
     this.gaugeBarWidthScale = 1,
-    Color backgroundColor = Colors.blue,
-    Color gaugeColor = Colors.grey
+    Color backgroundColor = Colors.grey,
+    Color gaugeColor = Colors.blue
   }) {
     backgroundGradient = ui.Gradient.linear(
       const Offset(0, 0),
