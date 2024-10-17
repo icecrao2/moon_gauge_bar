@@ -1,8 +1,8 @@
 name: moon_gauge_bar
 description: "moon_gauge_bar_package"
-version: 0.0.1
-homepage:
-repository:
+version: 1.0.0
+homepage: "https://github.com/icecrao2/moon_gauge_bar"
+repository: "https://github.com/icecrao2/moon_gauge_bar"
 
 environment:
   sdk: '>=3.3.1 <4.0.0'
