@@ -2,8 +2,7 @@
 A simple and easy-to-use gauge bar package!
 
 ### 1. half circular gauge bar
-![half_circular_gaugebar.gif](half_circular_gaugebar.gif)
-
+![video.gif](video.gif)
 
 ## Getting started
 
